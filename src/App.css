@@ -14,7 +14,7 @@ main {
   width: 700px;
   left: calc(50% - 350px);
   top: calc(50% - 350px);
-  opacity: 0.3;
+  opacity: 0.2;
   filter: blur(10px);
   animation: 1.5s ease-in-out fade;	
 }
@@ -25,7 +25,7 @@ main {
     transform: scale(2);
   } 				
   100% { 
-    opacity: 0.3;
+    opacity: 0.2;
     transform: scale(1);
   } 
 }			
