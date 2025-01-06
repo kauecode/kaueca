@@ -56,7 +56,7 @@ function App() {
         </div>
 
         <p className="greyed">
-          "Things" I specialize on:
+          "Things" I specialize in:
         </p>
 
         <div className="marquee" role="presentation">
