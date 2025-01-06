@@ -7,9 +7,18 @@ import { FaBootstrap, FaCodepen, FaCss3, FaGithub, FaNode, FaReact, FaSass } fro
 import { SiChakraui, SiNextdotjs, SiRadixui, SiTailwindcss, SiVite } from "react-icons/si"
 import { IoLogoHtml5 } from "react-icons/io"
 import { GiHammerNails } from "react-icons/gi"
+import { trackGAEvent } from "./utils/ga"
 
 function App() {
   
+  const linkClickTracker = (label:string) => {
+    trackGAEvent("click", { 
+      category: "link",
+      action: "click",
+      label
+    })
+  }
+
   return (
     <>
       <img aria-hidden="true" className="k-logo" src={klogo} alt="" />
@@ -22,6 +31,7 @@ function App() {
 
         <div className="social-icons">
           <motion.a 
+            onClick={() => linkClickTracker("LinkedIn")}            
             whileHover={{ scale: 1.15 }} 
             whileTap={{ scale: 0.95 }} 
             href="https://www.linkedin.com/in/kauecorrea/" 
@@ -33,6 +43,7 @@ function App() {
           </motion.a>
 
           <motion.a 
+            onClick={() => linkClickTracker("GitHub")}
             whileHover={{ scale: 1.15 }} 
             whileTap={{ scale: 0.95 }} 
             href="https://github.com/KaueCode" 
@@ -44,6 +55,7 @@ function App() {
           </motion.a>
 
           <motion.a 
+            onClick={() => linkClickTracker("CodePen")}             
             whileHover={{ scale: 1.15 }} 
             whileTap={{ scale: 0.95 }} 
             href="https://codepen.io/KaueCode" 
