@@ -12,25 +12,34 @@ main {
   z-index: -1;
   height: 700px;
   width: 700px;
-  left: calc(50% - 350px);
-  top: calc(50% - 350px);
+  left: calc(50vw - 350px);
+  top: calc(50vh - 350px);
   opacity: 0.3;
-  transform: scale(1);
+  transform: scale(1) rotate(0);
   filter: blur(10px);
   animation: 3s ease-in-out fade;	
 }
 
+@media (max-width: 600px) {
+  .k-logo {
+    height: 400px;
+    width: 400px;
+    left: calc(50vw - 200px);
+    top: calc(50vh - 200px);    
+  }
+}
+
 @keyframes fade { 
-  0% { 
+  0% {     
+    filter: blur(50px);
     transform: scale(2);
-    filter: blur(10px);
   } 			
-  20% { 
+  20% {     
+    filter: blur(50px);
     transform: scale(2);
-    filter: blur(10px);
   } 			  	
   100% { 
-    opacity: 0.3;
+    filter: blur(10px);
     transform: scale(1);
   } 
 }			
