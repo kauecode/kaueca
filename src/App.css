@@ -15,15 +15,20 @@ main {
   left: calc(50% - 350px);
   top: calc(50% - 350px);
   opacity: 0.2;
+  transform: scale(1);
   filter: blur(10px);
-  animation: 1.5s ease-in-out fade;	
+  animation: 3s ease-in-out fade;	
 }
 
 @keyframes fade { 
   0% { 
-    opacity: 0;
     transform: scale(2);
-  } 				
+    filter: blur(10px);
+  } 			
+  20% { 
+    transform: scale(2);
+    filter: blur(10px);
+  } 			  	
   100% { 
     opacity: 0.2;
     transform: scale(1);
