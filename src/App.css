@@ -14,9 +14,21 @@ main {
   width: 700px;
   left: calc(50% - 350px);
   top: calc(50% - 350px);
-  opacity: 0.2;
+  opacity: 0.3;
   filter: blur(10px);
+  animation: 1.5s ease-in-out fade;	
 }
+
+@keyframes fade { 
+  0% { 
+    opacity: 0;
+    transform: scale(2);
+  } 				
+  100% { 
+    opacity: 0.3;
+    transform: scale(1);
+  } 
+}			
 
 .social-icons {
   padding-bottom: 2em;
