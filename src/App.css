@@ -1,5 +1,5 @@
 main {
-  max-width: 680px;
+  max-width: 690px;
   width: 100%;
   margin: 0 auto;
   padding: 2rem;
@@ -14,7 +14,7 @@ main {
   width: 700px;
   left: calc(50% - 350px);
   top: calc(50% - 350px);
-  opacity: 0.2;
+  opacity: 0.3;
   transform: scale(1);
   filter: blur(10px);
   animation: 3s ease-in-out fade;	
@@ -30,7 +30,7 @@ main {
     filter: blur(10px);
   } 			  	
   100% { 
-    opacity: 0.2;
+    opacity: 0.3;
     transform: scale(1);
   } 
 }			
