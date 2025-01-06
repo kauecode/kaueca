@@ -27,3 +27,9 @@ body {
   width: 100%;
   position: relative;
 }
+
+@media (max-width: 600px) {
+  :root {
+    font-size: 17px;
+  }  
+}

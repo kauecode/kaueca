@@ -17,12 +17,12 @@ function App() {
 
         <h1>Hi, I'm Kaue! <span className="emoji">👋</span></h1>
 
-        <p>I'm a Toronto based <strong>software engineer</strong> who loves creating wonderful things with code — and sometimes wood!</p>  
+        <p>I'm a Toronto based <strong>software engineer</strong> who loves creating wonderful things with code — and sometimes wood.</p>  
         <p>Thanks for stopping by! I'm currently working on this website, but until it's done, you can learn more about me through the links below:</p>
 
         <div className="social-icons">
           <motion.a 
-            whileHover={{ scale: 1.1 }} 
+            whileHover={{ scale: 1.15 }} 
             whileTap={{ scale: 0.95 }} 
             href="https://www.linkedin.com/in/kauecorrea/" 
             target="_blank" 
@@ -33,7 +33,7 @@ function App() {
           </motion.a>
 
           <motion.a 
-            whileHover={{ scale: 1.1 }} 
+            whileHover={{ scale: 1.15 }} 
             whileTap={{ scale: 0.95 }} 
             href="https://github.com/KaueCode" 
             target="_blank" 
@@ -44,7 +44,7 @@ function App() {
           </motion.a>
 
           <motion.a 
-            whileHover={{ scale: 1.1 }} 
+            whileHover={{ scale: 1.15 }} 
             whileTap={{ scale: 0.95 }} 
             href="https://codepen.io/KaueCode" 
             target="_blank" 
