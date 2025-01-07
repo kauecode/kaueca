@@ -1,3 +1,3 @@
 # Kaue.ca
 
-Personal portfolio website
+Personal portfolio website, currently a work in progress...
