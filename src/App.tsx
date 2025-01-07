@@ -33,7 +33,7 @@ function App() {
       // Pointer position
       const mouseX = e.clientX;
       // Calculate how much to move
-      const moveX = Math.round((mouseX - centerX)) / 5;  
+      const moveX = Math.round((mouseX - centerX)) / 3;  
       // Update Image, using ref to avoid re-render
       imgRef.current.style.transform = `translate3d(${moveX}px, 0, 0)`;
     },
