@@ -128,7 +128,7 @@ function App() {
             <SiChakraui size={45} aria-hidden="true"/>
             <SiRadixui size={45} aria-hidden="true"/>
             <SiVite size={45} aria-hidden="true"/>
-            <GiHammerNails size={45} aria-hidden="true" title="Hammer and Nails"/>
+            <GiHammerNails size={45} aria-hidden="true"/>
           </div>
         </div>
       </main>

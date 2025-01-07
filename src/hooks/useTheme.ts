@@ -1,8 +1,13 @@
 import { useEffect, useState } from "react";
 
-export function useTheme() {
-  const [theme, setTheme] = useState(() => {
-    return localStorage.getItem("theme") || "dark";
+type useThemeTypes = {
+  theme: "light" | "dark",
+  toggleTheme: () => void
+}
+
+export const useTheme = ():useThemeTypes => {
+  const [theme, setTheme] = useState<"light" | "dark">(() => {
+    return localStorage.getItem("theme") as "light" | "dark" || "dark";
   });
 
   useEffect(() => {
