@@ -1,5 +1,5 @@
 import { motion } from "motion/react"
-import './App.css'
+import './App.scss'
 import klogo from '../public/k-logo.svg'
 import { BiLogoTypescript } from 'react-icons/bi'
 import { RiJavascriptFill, RiLinkedinFill } from "react-icons/ri"
@@ -9,8 +9,14 @@ import { IoLogoHtml5 } from "react-icons/io"
 import { GiHammerNails } from "react-icons/gi"
 import { trackGAEvent } from "./utils/ga"
 import { useCallback, useRef } from "react"
+import { useTheme } from "./hooks/useTheme"
+import { LuLightbulb, LuLightbulbOff } from "react-icons/lu"
 
 function App() {
+
+  const {theme, toggleTheme} = useTheme();
+
+  console.log(theme);
 
   // GA Tracking
   const linkClickTracker = (label:string) => {
@@ -40,7 +46,6 @@ function App() {
 
   return (
     <>
-      <img ref={imgRef} aria-hidden="true" className="k-logo" src={klogo} alt="" />
       <main>       
         <h1>Hi, I'm Kaue! <span className="emoji">👋</span></h1>
 
@@ -123,10 +128,20 @@ function App() {
             <SiChakraui size={45} aria-hidden="true"/>
             <SiRadixui size={45} aria-hidden="true"/>
             <SiVite size={45} aria-hidden="true"/>
-            <GiHammerNails size={45} aria-hidden="true"/>
+            <GiHammerNails size={45} aria-hidden="true" title="Hammer and Nails"/>
           </div>
         </div>
       </main>
+      <button 
+        aria-label="Enable Light Mode" 
+        aria-pressed={theme === "dark" ? false : true}
+        className="toggle-theme" 
+        onClick={toggleTheme}>
+        {theme === "dark" 
+          ? <LuLightbulbOff size={20} aria-hidden="true" />
+          : <LuLightbulb size={20} aria-hidden="true" />}
+      </button>
+      <img ref={imgRef} aria-hidden="true" className="k-logo" src={klogo} alt="" />      
     </>
   )
 }

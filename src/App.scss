@@ -7,6 +7,22 @@ main {
   position: relative;
 }
 
+.toggle-theme {
+  cursor: pointer;
+  opacity: 0.3;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background: transparent;
+  color: var(--primary-color);
+  filter: drop-shadow(0 0 1em var(--foreground-color));
+  transition: all 0.2s ease-in-out;
+  &:hover, &:focus {
+    opacity: 0.8;
+  }
+}
+
 .k-logo {
   position: absolute;
   z-index: -1;
@@ -15,11 +31,14 @@ main {
   left: calc(50vw - 350px);
   top: calc(50vh - 350px);
   opacity: 0.3;
-
+  will-change: filter transform;
   filter: blur(10px);
   transform: scale(1) translate3d(0px, 0px, 0px);
   animation: 3s ease-in-out fade;	
   transition: transform 1s ease-out;
+  [data-theme="light"] & {
+    opacity: 0.1;
+  }  
 }
 
 @keyframes fade { 
@@ -38,32 +57,28 @@ main {
 }			
 
 .social-icons {
-  margin-bottom: em;
+  margin-bottom: 1em;
   display: inline-block;
 }
 
 a {
   padding: 1em 1.3em;
-  font-weight: 500;
-  color: rgb(228, 228, 228);
+  color: var(--link);
   display: inline-block;
   will-change: filter;
   transition: filter 300ms;  
-}
-a:hover, a:focus {
-  color: rgb(255, 255, 255);
-  filter: drop-shadow(0 0 1em #ffffffaa);
+  &:hover, &:focus {
+    color: var(--link-hover);
+    filter: drop-shadow(0 0 1em var(--foreground-color));
+  }
 }
 
-.greyed {
-  color: #888;
-}
+.greyed { color: var(--greyed); }
 
 .emoji {
   display: inline-block;
   animation: waveAnimation 8s ease-in-out infinite;  
 }
-
 @keyframes waveAnimation {
   40% {
     transform: translateX(0);
@@ -96,33 +111,33 @@ a:hover, a:focus {
   /* Mask */
   mask-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0));
   -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0));
+  .marquee-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: max-content;
+    animation: marqueeAnimation 15s linear infinite;
+    svg {
+      opacity: 0.7;
+      color: var(--greyed);
+    }    
+  }  
 }
-.marquee-content {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  width: max-content;
-  animation: marqueeAnimation 15s linear infinite;
-}
-.marquee-content svg {
-  opacity: 0.7;
-  color: #888;
+@keyframes marqueeAnimation {
+  from { transform: translateX(0%);}
+  to { transform: translateX(-51%);}
 }
 
-@keyframes marqueeAnimation {
-  from {
-    transform: translateX(0%);
-  }
-  to {
-    transform: translateX(-51%);
-  }
-}
 
 @media (max-width: 600px) {
+  .toggle-theme {
+    opacity: 0.2;
+    right: calc(50vw - 20px);
+  }  
   .k-logo {
     height: 400px;
     width: 400px;
     left: calc(50vw - 200px);
-    top: calc(50vh - 200px);    
+    top: calc(50dvh - 200px);    
   }
 }
