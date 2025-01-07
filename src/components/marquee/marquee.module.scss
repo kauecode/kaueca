@@ -1,0 +1,41 @@
+.marqueeWrapper {
+  p { 
+    color: var(--greyed); 
+    margin: 1.5em 0 0.5em;
+  }
+}
+
+.reactTooltip {
+  padding: 0 !important;
+  color: var(--greyed) !important;
+  background-color: transparent !important;
+  font-size: 0.8rem !important;
+}
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 10px 0;  
+  /* Mask */
+  mask-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0));
+  -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0));
+}    
+
+.marqueeContent {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: max-content;
+  animation: marqueeAnimation 25s linear infinite;
+  svg {
+    &:hover, &:focus, &:active { outline: none; }
+    opacity: 0.7;
+    color: var(--greyed);
+  }    
+}  
+
+@keyframes marqueeAnimation {
+  from { transform: translateX(0%);}
+  to { transform: translateX(-51%);}
+}
