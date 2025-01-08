@@ -6,6 +6,7 @@ import { IoLogoHtml5 } from "react-icons/io"
 import { GiHammerNails } from "react-icons/gi"
 import { Tooltip } from 'react-tooltip'
 import styles from './marquee.module.scss'
+import { FaPersonFalling } from 'react-icons/fa6'
 
 const Marquee = () => {
 
@@ -15,20 +16,21 @@ const Marquee = () => {
     { comp: FaReact, size: 47, desc: "React" },
     { comp: SiNextdotjs, size: 47, desc: "Next.js" },
     { comp: FaNode, size: 67, desc: "Node.js" },
+    { comp: FaPersonFalling, size: 42, desc: "Humans!" },        
     { comp: IoLogoHtml5, size: 47, desc: "HTML5" },
-    { comp: FaCss3, size: 42, desc: "CSS3" },
-    { comp: FaSass, size: 47, desc: "SASS" },
+    { comp: FaCss3, size: 42, desc: "CSS 3" },
+    { comp: FaSass, size: 47, desc: "Scss" },
     { comp: SiTailwindcss, size: 47, desc: "Tailwind CSS" },
     { comp: FaBootstrap, size: 47, desc: "Bootstrap" },
     { comp: SiChakraui, size: 42, desc: "Chakra UI" },
     { comp: SiRadixui, size: 42, desc: "Radix UI" },
-    { comp: SiVite, size: 42, desc: "Vite" },
+    { comp: SiVite, size: 42, desc: "Vite" },    
     { comp: GiHammerNails, size: 42, desc: "Wood Working :)" }
   ];
 
   return (
     <div className={styles.marqueeWrapper}>
-      <p>"Things" I specialize in:</p>    
+      <p>"Things" I enjoy working with:</p>    
 
       {listOfTechs.map((_, idx) => 
         <Tooltip className={styles.reactTooltip} key={idx} place="bottom" id={`tooltip-${idx}`} />

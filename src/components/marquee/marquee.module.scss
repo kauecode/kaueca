@@ -1,8 +1,12 @@
 .marqueeWrapper {
   p { 
+    font-size: 0.58;
     color: var(--greyed); 
     margin: 1.5em 0 0.5em;
   }
+  /* Mask */
+  mask-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1) 25%, rgba(0,0,0,1) 75%, rgba(0,0,0,0));
+  -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1) 25%, rgba(0,0,0,1) 75%, rgba(0,0,0,0));  
 }
 
 .reactTooltip {
@@ -16,17 +20,14 @@
   width: 100%;
   overflow: hidden;
   position: relative;
-  padding: 10px 0;  
-  /* Mask */
-  mask-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0));
-  -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0));
+  padding: 10px 0 30px;  
 }    
 
 .marqueeContent {
   display: flex;
   align-items: center;
   gap: 40px;
-  width: max-content;
+  width: min-content;
   animation: marqueeAnimation 25s linear infinite;
   svg {
     &:hover, &:focus, &:active { outline: none; }

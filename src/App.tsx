@@ -46,7 +46,7 @@ function App() {
         <h1>Hi, I'm Kaue! <span className="emoji">👋</span></h1>
 
         <p>I'm a Toronto based <strong>software engineer</strong> who loves creating wonderful things with code — and sometimes wood.</p>  
-        <p>Thanks for stopping by! I'm currently working on this website, but until it's done, you can learn more about me through the links below:</p>
+        <p>Thanks for stopping by! I'm currently working on this website, but until it's done, you can learn more about my work in the links below:</p>
 
         <div className="social-icons"
           ref={targetRef}
@@ -56,7 +56,7 @@ function App() {
           <motion.a 
             onClick={() => linkClickTracker("LinkedIn")}            
             whileHover={{ scale: 1.15 }} 
-            whileTap={{ scale: 0.95 }} 
+            whileTap={{ scale: 0.9 }} 
             href="https://www.linkedin.com/in/kauecorrea/" 
             target="_blank" 
             rel="noopener noreferrer" 
@@ -68,7 +68,7 @@ function App() {
           <motion.a 
             onClick={() => linkClickTracker("GitHub")}
             whileHover={{ scale: 1.15 }} 
-            whileTap={{ scale: 0.95 }} 
+            whileTap={{ scale: 0.9 }} 
             href="https://github.com/KaueCode" 
             target="_blank" 
             rel="noopener noreferrer" 
