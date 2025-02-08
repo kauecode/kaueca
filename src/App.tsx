@@ -1,6 +1,6 @@
 import { motion } from "motion/react"
 import './App.scss'
-import klogo from '../public/k-logo.svg'
+import klogo from './assets/k-logo.svg'
 import { RiLinkedinFill } from "react-icons/ri"
 import { FaCodepen, FaGithub } from "react-icons/fa"
 import { trackGAEvent } from "./utils/ga"
