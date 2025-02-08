@@ -7,6 +7,10 @@ import { GiHammerNails } from "react-icons/gi"
 import { Tooltip } from 'react-tooltip'
 import styles from './marquee.module.scss'
 import { FaPersonFalling } from 'react-icons/fa6'
+import { SiRedux } from "react-icons/si";
+import { SiMui } from "react-icons/si";
+
+
 
 const Marquee = () => {
 
@@ -14,7 +18,8 @@ const Marquee = () => {
     { comp: RiJavascriptFill, size: 47, desc: "JavaScript" },
     { comp: BiLogoTypescript, size: 47, desc: "TypeScript" },
     { comp: FaReact, size: 47, desc: "React" },
-    { comp: SiNextdotjs, size: 47, desc: "Next.js" },
+    { comp: SiRedux, size: 47, desc: "Redux" },
+    { comp: SiNextdotjs, size: 47, desc: "Next.js" },    
     { comp: FaNode, size: 67, desc: "Node.js" },
     { comp: FaPersonFalling, size: 42, desc: "Humans!" },        
     { comp: IoLogoHtml5, size: 47, desc: "HTML5" },
@@ -22,6 +27,7 @@ const Marquee = () => {
     { comp: FaSass, size: 47, desc: "Scss" },
     { comp: SiTailwindcss, size: 47, desc: "Tailwind CSS" },
     { comp: FaBootstrap, size: 47, desc: "Bootstrap" },
+    { comp: SiMui, size: 47, desc: "Material UI" },        
     { comp: SiChakraui, size: 42, desc: "Chakra UI" },
     { comp: SiRadixui, size: 42, desc: "Radix UI" },
     { comp: SiVite, size: 42, desc: "Vite" },    
